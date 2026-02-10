@@ -176,12 +176,22 @@ body {
   min-height: 100svh;
   overflow: hidden;
   margin: auto;
+  position: relative;
+}
+.site__wrapper:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url(../img/background-images/bg-desktop.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  background-attachment: fixed;
-  position: relative;
+  z-index: -1;
 }
 
 .pin__page .modal__title {
@@ -403,7 +413,7 @@ body {
   .container {
     width: 738px;
   }
-  .site__wrapper {
+  .site__wrapper:before {
     background-image: url(../img/background-images/bg-laptop.png);
   }
 }
@@ -412,12 +422,12 @@ body {
     width: 100%;
     padding: 0 15px;
   }
-  .site__wrapper {
+  .site__wrapper:before {
     background-image: url(../img/background-images/bg-tablet.png);
   }
 }
 @media (max-width: 414px) {
-  .site__wrapper {
+  .site__wrapper:before {
     background-image: url(../img/background-images/bg-iphone-11.png);
   }
 }
@@ -446,7 +456,7 @@ body {
   }
 }
 @media (max-width: 320px) {
-  .site__wrapper {
+  .site__wrapper:before {
     background-image: url(../img/background-images/bg-iphone-SE.png);
   }
   .modal__wrapper {
@@ -484,7 +494,7 @@ body {
   }
 }
 @media (orientation: landscape) and (max-width: 896px) {
-  .site__wrapper {
+  .site__wrapper:before {
     background-image: url(../img/background-images/bg-iphone-8-horiz.png);
   }
   .modal__wrapper {
@@ -534,7 +544,7 @@ body {
   }
 }
 @media (orientation: landscape) and (max-width: 568px) {
-  .site__wrapper {
+  .site__wrapper:before {
     background-image: url(../img/background-images/bg-iphone-SE\ horiz.png);
   }
   .pin__page .modal__title {
