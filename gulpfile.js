@@ -105,17 +105,17 @@ function watchFiles(params) {
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
   gulp.watch([path.watch.fonts], fonts);
-  gulp.watch([path.watch.libs], libs);
+  // gulp.watch([path.watch.libs], libs);
 }
 
 function clean(params) {
   return del(path.clean);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, libs));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
-exports.libs = libs;
+// exports.libs = libs;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
