@@ -60,14 +60,11 @@ body {
 
 .modal {
   position: fixed;
-  height: 150vh;
-  height: 150svh;
-  top: 50%;
+  top: 0;
   left: 0;
   right: 0;
-  transform: translateY(-50%);
+  bottom: 0;
   z-index: 1;
-  background-color: var(--overlay-color);
   display: flex;
   justify-content: center;
   align-items: center;
