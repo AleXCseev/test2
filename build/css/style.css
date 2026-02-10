@@ -1,0 +1,543 @@
+:root {
+  --font-family: "Tahoma", sans-serif;
+  --white: #fff;
+  --red: #fa0101;
+  --gray: #757575;
+  --text-color: #000;
+  --secondary-text-color: #3e3e3e;
+  --btn-static-color: #3b82f7;
+  --btn-hover-color: rgba(0, 0, 0, 0.2);
+  --btn-press-color: rgba(0, 0, 0, 0.4);
+  --btn-disabled-color: #bdbebf;
+  --overlay-color: rgba(0, 0, 0, 0.3);
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: url("../fonts/Tahoma.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tahoma";
+  src: url("../fonts/Tahoma-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--text-color);
+  background: var(--white-color);
+}
+
+.site__wrapper {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  margin: auto;
+  background-image: url(../img/background-images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.pin__page .modal__title {
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 21px;
+}
+.pin__page .modal__wrapper {
+  padding: 29px 23px;
+}
+.pin__page .modal__form {
+  padding: 0 4px;
+}
+
+.container {
+  width: 1152px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: var(--overlay-color);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 33px;
+}
+
+.site__main {
+  height: calc(100vh - 38px);
+  height: calc(100svh - 38px);
+}
+
+.modal__wrapper {
+  width: 100%;
+  max-width: 348px;
+  border-radius: 20px;
+  background: var(--white);
+  padding: 29px 27px;
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: normal;
+  color: var(--text-color);
+  margin-bottom: 22px;
+}
+
+.modal__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+  text-align: justify;
+  color: var(--text-color);
+  margin-bottom: 39px;
+}
+
+.modal__icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  gap: 30px;
+  margin-bottom: 29px;
+}
+
+.modal__form {
+  width: 100%;
+  height: auto;
+}
+
+.modal__input-wrapper {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.modal__input {
+  width: 100%;
+  height: 46px;
+  text-align: center;
+  border: 1px solid var(--btn-static-color);
+  border-radius: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 0.6;
+  color: var(--gray);
+  outline: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.modal__input:disabled {
+  background: var(--white);
+  color: var(--btn-disabled-color);
+  border-color: var(--btn-disabled-color);
+}
+.modal__input.error {
+  border-color: var(--red);
+}
+
+.label__phone {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--red);
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+}
+.label__phone.error {
+  display: block;
+}
+
+.modal__submit {
+  width: 100%;
+  height: 46px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 0.6;
+  text-align: justify;
+  color: var(--white);
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border: none;
+  background: var(--btn-static-color);
+  position: relative;
+  overflow: hidden;
+}
+.modal__submit span {
+  position: relative;
+  z-index: 2;
+}
+.modal__submit:before {
+  content: "";
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 25px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.modal__submit:hover:before {
+  width: 100%;
+  height: 100%;
+  background: var(--btn-hover-color);
+}
+.modal__submit:active:before {
+  width: 100%;
+  height: 100%;
+  background: var(--btn-press-color);
+}
+.modal__submit:disabled {
+  background: var(--btn-disabled-color);
+  cursor: auto;
+}
+.modal__submit:disabled:before {
+  display: none;
+}
+
+.footer {
+  padding-bottom: 50px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.09091;
+  text-align: justify;
+  color: var(--secondary-text-color);
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 738px;
+  }
+  .site__wrapper {
+    background-image: url(../img/background-images/bg-laptop.png);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .site__wrapper {
+    background-image: url(../img/background-images/bg-tablet.png);
+  }
+}
+@media (max-width: 414px) {
+  .site__wrapper {
+    background-image: url(../img/background-images/bg-iphone-11.png);
+  }
+}
+@media (max-width: 375px) {
+  .modal {
+    padding: 23px;
+  }
+  .modal__title {
+    font-size: 18px;
+    margin-bottom: 21px;
+  }
+  .modal__text {
+    font-size: 18px;
+    margin-bottom: 26px;
+  }
+  .modal__icon {
+    gap: 26px;
+  }
+  .modal__usb {
+    width: 55px;
+    height: auto;
+  }
+  .modal__battery {
+    width: 45px;
+    height: auto;
+  }
+}
+@media (max-width: 320px) {
+  .site__wrapper {
+    background-image: url(../img/background-images/bg-iphone-SE.png);
+  }
+  .modal__wrapper {
+    padding: 20px 23px;
+  }
+  .modal {
+    padding: 12px;
+  }
+  .modal__title {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  .modal__text {
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+  .modal__icon {
+    gap: 22px;
+  }
+  .modal__usb {
+    width: 46px;
+    height: auto;
+  }
+  .modal__battery {
+    width: 37px;
+    height: auto;
+  }
+  .modal__input {
+    height: 39px;
+    font-size: 18px;
+  }
+  .modal__submit {
+    height: 39px;
+    font-size: 18px;
+  }
+}
+@media (orientation: landscape) and (max-width: 896px) {
+  .site__wrapper {
+    background-image: url(../img/background-images/bg-iphone-8-horiz.png);
+  }
+  .modal__wrapper {
+    max-width: 545px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    gap: 37px;
+  }
+  .modal__form {
+    width: 227px;
+    -webkit-flex-shrink: 0;
+            flex-shrink: 0;
+  }
+  .modal__title {
+    font-size: 16px;
+    margin-bottom: 17px;
+  }
+  .modal__text {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .modal__usb {
+    width: 46px;
+    height: auto;
+  }
+  .modal__battery {
+    width: 37px;
+    height: auto;
+  }
+  .modal__input {
+    height: 39px;
+    font-size: 18px;
+  }
+  .modal__submit {
+    height: 39px;
+    font-size: 18px;
+  }
+  .pin__page .modal__title {
+    margin-bottom: 0px;
+  }
+}
+@media (orientation: landscape) and (max-width: 568px) {
+  .site__wrapper {
+    background-image: url(../img/background-images/bg-iphone-SE\ horiz.png);
+  }
+  .pin__page .modal__title {
+    margin-bottom: 0px;
+  }
+}
