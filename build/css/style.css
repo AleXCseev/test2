@@ -437,6 +437,9 @@ body {
   }
 }
 @media (max-width: 375px) {
+  .site__wrapper:before {
+    background-image: url(../img/background-images/bg-iphone-8.png);
+  }
   .modal {
     padding: 23px;
   }
